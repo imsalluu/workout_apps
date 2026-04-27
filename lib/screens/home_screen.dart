@@ -19,8 +19,15 @@ class HomeScreen extends StatelessWidget {
             floating: false,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
-              title: const Text('MY PROGRESS'),
               centerTitle: true,
+              title: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset('assets/app_logo.png', height: 24),
+                  const SizedBox(width: 10),
+                  const Text('MY PROGRESS', style: TextStyle(fontSize: 16)),
+                ],
+              ),
               background: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
